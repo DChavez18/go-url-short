@@ -82,6 +82,6 @@ func main() {
 	http.HandleFunc("/shorten", shortener.HandleShorten)
 	http.HandleFunc("/short/", shortener.HandleRedirect)
 
-	fmt.Println("URL Shortener is running on :8080")
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("URL Shortener is running on :9000")
+	http.ListenAndServe(":9000", nil)
 }
