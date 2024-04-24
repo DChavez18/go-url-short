@@ -28,10 +28,20 @@ func handleForm(w http.ResponseWriter, r *http.Request) {
 	// Serve the HTML form
 	w.Header().Set("Content-Type", "text/html")
 	fmt.Fprint(w, `
-		<!DOCTYPE html>
+	<!DOCTYPE html>
 		<html>
 		<head>
 			<title>URL Shortener</title>
+			<style>
+				body { font-family: Arial, sans-serif; margin: 40px auto; width: 80%; max-width: 600px; }
+				h2 { color: #333; }
+				form { margin-top: 20px; }
+				input[type="url"], input[type="submit"] { padding: 10px; width: 100%; margin-top: 5px; }
+				input[type="submit"] { background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; }
+				input[type="submit"]:hover { background-color: #45a049; }
+				p { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+				a { color: #06C; }
+			</style>
 		</head>
 		<body>
 			<h2>URL Shortener</h2>
